@@ -1,0 +1,23 @@
+onboarding = false
+
+[keys]
+previous_workspace = "alt+up"
+next_workspace = "alt+down"
+previous_tab = "alt+left"
+next_tab = "alt+right"
+new_workspace = "alt+shift+w"
+new_tab = "alt+shift+t"
+focus_pane_left = ["prefix+h", "ctrl+alt+left"]
+focus_pane_down = ["prefix+j", "ctrl+alt+down"]
+focus_pane_up = ["prefix+k", "ctrl+alt+up"]
+focus_pane_right = ["prefix+l", "ctrl+alt+right"]
+
+# Space picker: fuzzy-pick a project dir under ~/Documents/code/alkait,
+# focus it if open, otherwise create the workspace. Sorted by most recently used.
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "python3 ~/.config/herdr/scripts/space-picker.py"
+description = "open a space"
+width = 64
+height = 18
