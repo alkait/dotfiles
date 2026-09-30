@@ -12,10 +12,16 @@ the source of truth; the live config locations are symlinks into it.
 - `prefix+t` in Herdr opens the space picker: a fuzzy list of the directories
   under `~/Documents/code/alkait`, sorted by most recently used. Enter focuses
   the workspace if open, otherwise creates it.
+- The `remote-watch` plugin in `herdr/plugins/remote-watch` is linked
+  (`herdr plugin list` shows `alkait.remote-watch`). Entering a space fetches
+  its git remote in the background, at most once every 5 minutes per repo, so
+  the sidebar's `↑n ↓n` counts are current. It only fetches; it never pulls.
+  With `[ui.toast] delivery = "herdr"` in `config.toml` it also shows a toast
+  once per new remote head when the space is behind.
 - The `alt+…` bindings in `config.toml` reach Herdr, meaning the terminal sends
   Option/Alt as Alt.
 
-`install.sh` produces the symlink part of this end state and is safe to re-run.
+`install.sh` produces the symlinks and the plugin link, and is safe to re-run.
 
 ## Prerequisites
 
@@ -30,4 +36,5 @@ the source of truth; the live config locations are symlinks into it.
 
 `session.json`, logs, sockets and `.plugins.lock` in `~/.config/herdr` are
 per-machine runtime state and stay out of the repo. The picker's usage history
-in `~/.local/state/herdr` rebuilds itself.
+in `~/.local/state/herdr` rebuilds itself, as does the plugin's fetch throttle
+state in `~/.local/state/herdr/plugins`.

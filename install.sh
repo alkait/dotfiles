@@ -21,4 +21,6 @@ link herdr/scripts     "$HOME/.config/herdr/scripts"
 
 if command -v herdr >/dev/null 2>&1; then
     herdr server reload-config >/dev/null 2>&1 && echo "herdr config reloaded" || true
+    # Plugins are registered by path, straight from this repo.
+    herdr plugin link "$REPO/herdr/plugins/remote-watch" >/dev/null 2>&1 && echo "herdr plugin remote-watch linked" || true
 fi

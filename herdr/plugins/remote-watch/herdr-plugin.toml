@@ -1,0 +1,25 @@
+id = "alkait.remote-watch"
+name = "Remote Watch"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Fetch a space's git remote when you enter it and toast if it has new commits"
+platforms = ["linux", "macos"]
+
+# Server start / session restore: check every open space.
+[[startup]]
+command = ["python3", "remote_watch.py"]
+
+# Entering a space.
+[[events]]
+on = "workspace.created"
+command = ["python3", "remote_watch.py"]
+
+[[events]]
+on = "workspace.focused"
+command = ["python3", "remote_watch.py"]
+
+# Covers returning to a space that was already focused (e.g. after suspend):
+# the next agent turn triggers a check. Throttled, so this stays cheap.
+[[events]]
+on = "pane.agent_status_changed"
+command = ["python3", "remote_watch.py"]
