@@ -18,8 +18,10 @@ the source of truth; the live config locations are symlinks into it.
   the sidebar's `↑n ↓n` counts are current. It only fetches; it never pulls.
   With `[ui.toast] delivery = "herdr"` in `config.toml` it also shows a toast
   once per new remote head when the space is behind.
-- The `alt+…` bindings in `config.toml` reach Herdr, meaning the terminal sends
-  Option/Alt as Alt.
+- `~/.config/ghostty/config` is a symlink to `ghostty/config` in this repo.
+- The `alt+…` bindings in `config.toml` reach Herdr: Ghostty sends Option as
+  Alt, and its default Option+Left/Right word-jump bindings (`esc:b` / `esc:f`)
+  are unbound so those arrows reach Herdr as `alt+left` / `alt+right`.
 
 `install.sh` produces the symlinks and the plugin link, and is safe to re-run.
 

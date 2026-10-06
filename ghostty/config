@@ -1,0 +1,23 @@
+window-width = 100
+window-height = 30
+font-family = "Menlo"
+font-size = 22
+theme = "Afterglow"
+shell-integration-features = no-cursor
+
+# merged from ~/Library/Application Support/com.mitchellh.ghostty/config
+quit-after-last-window-closed = true
+clipboard-paste-protection = false
+
+
+# Send Option as Alt so herdr alt+… bindings work (Ghostty only, not OS-wide)
+macos-option-as-alt = true
+
+# Fullscreen without a separate macOS Space, so switching to it has no slide animation
+macos-non-native-fullscreen = true
+
+# Ghostty's macOS defaults turn Option+Left/Right into esc:b / esc:f (word jump),
+# so herdr sees alt+b / alt+f instead of alt+left / alt+right. Unbind them so
+# the arrows reach herdr (previous_tab / next_tab).
+keybind = alt+arrow_left=unbind
+keybind = alt+arrow_right=unbind
