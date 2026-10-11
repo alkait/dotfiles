@@ -165,21 +165,21 @@ focus-follows-mouse.enabled = false
     #alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    # Fullscreen is dropped first so the moved window tiles next to what's already there.
+    # The moved window drops fullscreen (so it tiles next to what's already there) and you follow it.
     # Letters match the app workspaces (alt-<letter>); alt-shift-f stays fullscreen.
-    alt-shift-1 = ['fullscreen off', 'move-node-to-workspace 1']
-    alt-shift-2 = ['fullscreen off', 'move-node-to-workspace 2']
-    alt-shift-3 = ['fullscreen off', 'move-node-to-workspace 3']
-    alt-shift-4 = ['fullscreen off', 'move-node-to-workspace 4']
-    alt-shift-5 = ['fullscreen off', 'move-node-to-workspace 5']
-    alt-shift-6 = ['fullscreen off', 'move-node-to-workspace 6']
-    alt-shift-7 = ['fullscreen off', 'move-node-to-workspace 7']
-    alt-shift-8 = ['fullscreen off', 'move-node-to-workspace 8']
-    alt-shift-9 = ['fullscreen off', 'move-node-to-workspace 9']
-    alt-shift-a = ['fullscreen off', 'move-node-to-workspace A']
-    alt-shift-b = ['fullscreen off', 'move-node-to-workspace B']
+    alt-shift-1 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 1']
+    alt-shift-2 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 2']
+    alt-shift-3 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 3']
+    alt-shift-4 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 4']
+    alt-shift-5 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 5']
+    alt-shift-6 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 6']
+    alt-shift-7 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 7']
+    alt-shift-8 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 8']
+    alt-shift-9 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 9']
+    alt-shift-a = ['fullscreen off', 'move-node-to-workspace --focus-follows-window A']
+    alt-shift-b = ['fullscreen off', 'move-node-to-workspace --focus-follows-window B']
     #alt-shift-c = 'move-node-to-workspace C'
-    alt-shift-d = ['fullscreen off', 'move-node-to-workspace D']
+    alt-shift-d = ['fullscreen off', 'move-node-to-workspace --focus-follows-window D']
     #alt-shift-e = 'move-node-to-workspace E'
     alt-shift-f = 'fullscreen --no-outer-gaps'
     #alt-shift-g = 'move-node-to-workspace G'
@@ -194,9 +194,9 @@ focus-follows-mouse.enabled = false
     #alt-shift-t = 'move-node-to-workspace T'
     #alt-shift-u = 'move-node-to-workspace U'
     #alt-shift-v = 'move-node-to-workspace V'
-    alt-shift-w = ['fullscreen off', 'move-node-to-workspace W']
-    alt-shift-x = ['fullscreen off', 'move-node-to-workspace X']
-    alt-shift-y = ['fullscreen off', 'move-node-to-workspace Y']
+    alt-shift-w = ['fullscreen off', 'move-node-to-workspace --focus-follows-window W']
+    alt-shift-x = ['fullscreen off', 'move-node-to-workspace --focus-follows-window X']
+    alt-shift-y = ['fullscreen off', 'move-node-to-workspace --focus-follows-window Y']
     #alt-shift-z = 'move-node-to-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
