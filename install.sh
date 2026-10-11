@@ -22,6 +22,14 @@ link herdr/scripts     "$HOME/.config/herdr/scripts"
 # ghostty (XDG path, read on Linux and macOS)
 link ghostty/config    "$HOME/.config/ghostty/config"
 
+# aerospace (macOS only): the whole folder, config and the scripts it runs
+if [ "$(uname)" = Darwin ]; then
+    link aerospace "$HOME/.config/aerospace"
+    if command -v aerospace >/dev/null 2>&1; then
+        aerospace reload-config >/dev/null 2>&1 && echo "aerospace config reloaded" || true
+    fi
+fi
+
 if command -v herdr >/dev/null 2>&1; then
     herdr server reload-config >/dev/null 2>&1 && echo "herdr config reloaded" || true
     # Plugins are registered by path, straight from this repo.

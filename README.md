@@ -22,12 +22,19 @@ the source of truth; the live config locations are symlinks into it.
 - The `alt+…` bindings in `config.toml` reach Herdr: Ghostty sends Option as
   Alt, and its default Option+Left/Right word-jump bindings (`esc:b` / `esc:f`)
   are unbound so those arrows reach Herdr as `alt+left` / `alt+right`.
+- macOS only: `~/.config/aerospace` is a symlink to `aerospace/` in this repo
+  (config plus the scripts its bindings run), and the running AeroSpace has
+  reloaded it. `alt+<letter>` brings an app to its home workspace and focuses
+  it, launching it there if it isn't running: Herdr `A`, Brave `B`, the dev
+  browser `D`, WhatsApp `W`, X `X`, YouTube `Y`. Windows opened any other way
+  stay where they open, and `alt+shift+<n>` moves them freely.
 
 `install.sh` produces the symlinks and the plugin link, and is safe to re-run.
 
 ## Prerequisites
 
 - `herdr` installed and on PATH (https://herdr.dev/docs/install/).
+- macOS: AeroSpace installed (https://nikitabobko.github.io/AeroSpace/guide#installation).
 - `python3` on PATH with the standard `curses` module (macOS: Xcode command
   line tools provide it).
 - Projects live under `~/Documents/code/alkait`. If they live elsewhere on this
