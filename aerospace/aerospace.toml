@@ -180,7 +180,6 @@ focus-follows-mouse.enabled = false
     alt-shift-9 = ['fullscreen off', 'move-node-to-workspace --focus-follows-window 9']
     alt-shift-a = ['fullscreen off', 'move-node-to-workspace --focus-follows-window A']
     alt-shift-b = ['fullscreen off', 'move-node-to-workspace --focus-follows-window B']
-    #alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = ['fullscreen off', 'move-node-to-workspace --focus-follows-window D']
     #alt-shift-e = 'move-node-to-workspace E'
     alt-shift-f = 'fullscreen --no-outer-gaps'
