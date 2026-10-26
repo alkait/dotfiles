@@ -1,5 +1,8 @@
 onboarding = false
 
+[ui]
+confirm_close = false
+
 [keys]
 previous_workspace = "alt+up"
 next_workspace = "alt+down"
