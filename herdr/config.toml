@@ -3,6 +3,9 @@ onboarding = false
 [ui]
 confirm_close = false
 
+[terminal]
+default_shell = "/bin/zsh"
+
 [keys]
 previous_workspace = "alt+up"
 next_workspace = "alt+down"
